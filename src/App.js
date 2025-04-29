@@ -26,7 +26,7 @@ function App() {
           setAiInsight(getAIInsights(newSpeed)); // Add AI insight
 
           // Save to back-end
-          await axios.post('https://vehicle-speed-tracker-server-123.onrender.com/api/gps', {
+          await axios.post('https://vehicle-speed-tracker-server.onrender.com/api/gps', {
             userId,
             vehicleType,
             speed: newSpeed,
@@ -61,7 +61,7 @@ function App() {
 
 // Fetch leaderboard data
 useEffect(() => {
-  axios.get('https://vehicle-speed-tracker-server-123.onrender.com/api/leaderboard')
+  axios.get('https://vehicle-speed-tracker-server.onrender.com/api/leaderboard')
     .then((res) => {
       setLeaderboard(res.data);
     })
